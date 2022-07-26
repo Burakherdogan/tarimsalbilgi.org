@@ -1,0 +1,167 @@
+:root {
+  --primary-color: #92b6b1;
+  --secondary-color: #e8ddb5;
+  --light-color: #c0ceae;
+  --dark-color: #55576f;
+  --max-width: 1100px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--light-color);
+}
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Varela Round", sans-serif;
+  margin: 0.7rem;
+  line-height: 1.3;
+}
+p {
+  margin: 0.5rem 0;
+}
+/* utils */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  background-color: var(--dark-color);
+  color: #fff;
+  padding: 0.4rem 1.6rem;
+}
+.btn-light {
+  background-color: var(--light-color);
+}
+.btn-dark {
+  background-color: var(--dark-color);
+}
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-dark:hover {
+  background-color: var(--light-color);
+}
+.btn-light:hover {
+  background-color: var(--dark-color);
+}
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.bg-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.bg-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.bg-light {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+.bg-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+/* navbar */
+#main-nav {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 0.6fr 3fr;
+  padding: 1rem;
+  align-items: center;
+}
+#main-nav ul {
+  display: flex;
+  justify-self: start;
+}
+#main-nav ul li a {
+  padding: 0.85rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
+#main-nav ul li a.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 5px;
+}
+#main-nav ul li a:hover {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+/* header  */
+#header {
+  color: #fff;
+  background-color: #333;
+  padding: 2rem;
+  position: relative;
+}
+#header::before {
+  content: "";
+  background: url("../images/background.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+#header .header-container {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+#header .header-content {
+  z-index: 2;
+}
+#header .header-content p {
+  margin-bottom: 1rem;
+}
